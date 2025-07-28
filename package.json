@@ -2,10 +2,12 @@
   "name": "next-ai-prep",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "seed": "ts-node --loader ts-node/esm loadDB.ts",
     "lint": "next lint"
   },
   "dependencies": {
@@ -15,10 +17,12 @@
     "ai": "^3.0.23",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "dotenv": "^16.4.5",
     "langchain": "^0.3.30",
     "lucide-react": "^0.370.0",
     "next": "14.2.1",
     "openai": "^4.37.1",
+    "puppeteer": "^24.15.0",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.2",
@@ -26,12 +30,14 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/puppeteer": "^5.4.7",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
